@@ -14,6 +14,7 @@ abstract class Department {
     return { name: name };
   }
   
+  //   test 2
   // test
   abstract describe(this: Department): void;
 
