@@ -44,6 +44,8 @@ class ITDepartment extends Department {
 class AccountingDepartment extends Department {
   private lastReport: string;
 
+  
+
   get mostRecentReport() {
     if (this.lastReport) {
       return this.lastReport;
