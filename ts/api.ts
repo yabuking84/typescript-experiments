@@ -14,7 +14,7 @@ abstract class Department {
     return { name: name };
   }
   
-
+  // test
   abstract describe(this: Department): void;
 
   addEmployee(employee: string) {
