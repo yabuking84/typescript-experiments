@@ -41,28 +41,28 @@ Person = __decorate([
 const pers = new Person();
 console.log(pers);
 // ---
-function Log(target, propertyName) {
-    console.log("YYYYYYY Log Property decorator!");
+function PropertyD(target, propertyName) {
+    console.log("YYYYYYY PropertyD Property decorator!");
     console.log(target);
     console.log(propertyName);
     console.log("xxxx");
 }
-function Log2(target, name, descriptor) {
-    console.log("YYYYYYY Log2 Accessor decorator!");
+function AccessorD(target, name, descriptor) {
+    console.log("YYYYYYY AccessorD Accessor decorator!");
     console.log(target);
     console.log(name);
     console.log(descriptor);
     console.log("xxxx");
 }
-function Log3(target, name, descriptor) {
-    console.log("YYYYYYY Log3 Method decorator!");
+function MethodD(target, name, descriptor) {
+    console.log("YYYYYYY MethodD Method decorator!");
     console.log(target);
     console.log(name);
     console.log(descriptor);
     console.log("xxxx");
 }
-function Log4(target, name, position) {
-    console.log("YYYYYYY Log4 Parameter decorator!");
+function ParamD(target, name, position) {
+    console.log("YYYYYYY ParamD Parameter decorator!");
     console.log(target);
     console.log(name);
     console.log(position);
@@ -86,14 +86,14 @@ class Product {
     }
 }
 __decorate([
-    Log
+    PropertyD
 ], Product.prototype, "title", void 0);
 __decorate([
-    Log2
+    AccessorD
 ], Product.prototype, "price", null);
 __decorate([
-    Log3,
-    __param(0, Log4)
+    MethodD,
+    __param(0, ParamD)
 ], Product.prototype, "getPriceWithTax", null);
 const p1 = new Product("Book", 19);
 const p2 = new Product("Book 2", 29);

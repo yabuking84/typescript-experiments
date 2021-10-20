@@ -18,7 +18,7 @@ function newObj2<T extends Lengthy>(arg: T) {
 }
 
 // const hey2 = newObj2(23); // will show an error because 23 doesnt have length
-const hey2 = newObj2("asd");
+const hey2 = newObj2<string>("23");
 
 console.log(hey2);
 //////////////////////////////////////////////////////
@@ -31,7 +31,7 @@ function extractAndConvert<T extends object, U extends keyof T>(
 
 extractAndConvert({}, "name");
 
-export function newObj3<T extends object>(obj: T): T {
+export function newObj3<T extends Record<string, unknown>>(obj: T): T {
   return JSON.parse(JSON.stringify(obj));
 }
 
