@@ -38,4 +38,7 @@ class Person2 extends Person {
 }
 const p = new Person();
 console.log(p.name);
+console.log("xxxxxxxxxxxxxxxxxxxxxxx");
+const p1 = new Person();
+console.log(p1.name);
 export {};

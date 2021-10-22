@@ -7,6 +7,9 @@ class Person {
     firstLetter() {
         return this.firstName.charAt(0);
     }
+    get secondChar() {
+        return this.firstName.charAt(2);
+    }
 }
 class Factory {
     create(type) {
@@ -23,4 +26,5 @@ Person.prototype.firstLetter = function () {
     return this.firstName.charAt(0) + " sdfdsf";
 };
 console.log(p.firstLetter());
+console.log(p.secondChar);
 console.log(p);
