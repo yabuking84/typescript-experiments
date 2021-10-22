@@ -1,4 +1,10 @@
-"use strict";
+// function Logger(logString: string) {
+//   console.log("LOGGER FACTORY");
+//   return function (constructor: any) {
+//     console.log(logString);
+//     console.log(constructor);
+//   };
+// }
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,65 +14,55 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-function Logger(logString) {
-    console.log("LOGGER FACTORY");
-    return function (constructor) {
-        console.log(logString);
-        console.log(constructor);
-    };
-}
-function WithTemplate(template, hookId) {
-    console.log("TEMPLATE FACTORY");
-    return function (constructor) {
-        console.log("Rendering template");
-        const hookEl = document.getElementById(hookId);
-        const p = new constructor();
-        if (hookEl) {
-            hookEl.innerHTML = template;
-            hookEl.querySelector("h1").textContent = p.name;
-        }
-    };
-}
-// @Logger('LOGGING - PERSON')
-let Person = class Person {
-    constructor() {
-        this.name = "Max";
-        console.log("Creating person object...");
-    }
-};
-Person = __decorate([
-    Logger("LOGGING"),
-    WithTemplate("<h1>My Person Object</h1>", "app")
-], Person);
-const pers = new Person();
-console.log(pers);
-// ---
+// function WithTemplate(template: string, hookId: string) {
+//   console.log("TEMPLATE FACTORY");
+//   return function (constructor: any) {
+//     console.log("Rendering template");
+//     const hookEl = document.getElementById(hookId);
+//     const p = new constructor();
+//     if (hookEl) {
+//       hookEl.innerHTML = template;
+//       hookEl.querySelector("h1")!.textContent = p.name;
+//     }
+//   };
+// }
+// // @Logger('LOGGING - PERSON')
+// @Logger("LOGGING")
+// @WithTemplate("<h1>My Person Object</h1>", "app")
+// class Person {
+//   name = "Max";
+//   constructor() {
+//     console.log("Creating person object...");
+//   }
+// }
+// const pers = new Person();
+// console.log(pers);
+// --- ////////////////////////////////////////////////
 function PropertyD(target, propertyName) {
     console.log("YYYYYYY PropertyD Property decorator!");
-    console.log(target);
-    console.log(propertyName);
+    console.log("target = ", target);
+    console.log("propertyName = ", propertyName);
     console.log("xxxx");
 }
 function AccessorD(target, name, descriptor) {
     console.log("YYYYYYY AccessorD Accessor decorator!");
-    console.log(target);
-    console.log(name);
-    console.log(descriptor);
+    console.log("target = ", target);
+    console.log("name = ", name);
+    console.log("descriptor = ", descriptor);
     console.log("xxxx");
 }
 function MethodD(target, name, descriptor) {
     console.log("YYYYYYY MethodD Method decorator!");
-    console.log(target);
-    console.log(name);
-    console.log(descriptor);
+    console.log("target = ", target);
+    console.log("name = ", name);
+    console.log("descriptor = ", descriptor);
     console.log("xxxx");
 }
 function ParamD(target, name, position) {
     console.log("YYYYYYY ParamD Parameter decorator!");
-    console.log(target);
-    console.log(name);
-    console.log(position);
+    console.log("target = ", target);
+    console.log("name = ", name);
+    console.log("position = ", position);
     console.log("xxxx");
 }
 class Product {
@@ -98,3 +94,4 @@ __decorate([
 ], Product.prototype, "getPriceWithTax", null);
 const p1 = new Product("Book", 19);
 const p2 = new Product("Book 2", 29);
+export {};

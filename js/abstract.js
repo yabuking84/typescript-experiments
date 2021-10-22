@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 class Department {
     constructor(id, name) {
         this.id = id;
@@ -88,3 +86,4 @@ accounting.addEmployee("Manu");
 // accounting.printReports();
 // accounting.printEmployeeInformation();
 accounting.describe();
+export {};

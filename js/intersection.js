@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 const hey = {
     name: "asd",
     priviliges: ["asd"],
@@ -9,3 +7,4 @@ const src = {
     title: "asd",
     data: 1,
 };
+export {};

@@ -1,53 +1,53 @@
-function Logger(logString: string) {
-  console.log("LOGGER FACTORY");
-  return function (constructor: any) {
-    console.log(logString);
-    console.log(constructor);
-  };
-}
+// function Logger(logString: string) {
+//   console.log("LOGGER FACTORY");
+//   return function (constructor: any) {
+//     console.log(logString);
+//     console.log(constructor);
+//   };
+// }
 
-function WithTemplate(template: string, hookId: string) {
-  console.log("TEMPLATE FACTORY");
-  return function (constructor: any) {
-    console.log("Rendering template");
-    const hookEl = document.getElementById(hookId);
-    const p = new constructor();
-    if (hookEl) {
-      hookEl.innerHTML = template;
-      hookEl.querySelector("h1")!.textContent = p.name;
-    }
-  };
-}
+// function WithTemplate(template: string, hookId: string) {
+//   console.log("TEMPLATE FACTORY");
+//   return function (constructor: any) {
+//     console.log("Rendering template");
+//     const hookEl = document.getElementById(hookId);
+//     const p = new constructor();
+//     if (hookEl) {
+//       hookEl.innerHTML = template;
+//       hookEl.querySelector("h1")!.textContent = p.name;
+//     }
+//   };
+// }
 
-// @Logger('LOGGING - PERSON')
-@Logger("LOGGING")
-@WithTemplate("<h1>My Person Object</h1>", "app")
-class Person {
-  name = "Max";
+// // @Logger('LOGGING - PERSON')
+// @Logger("LOGGING")
+// @WithTemplate("<h1>My Person Object</h1>", "app")
+// class Person {
+//   name = "Max";
 
-  constructor() {
-    console.log("Creating person object...");
-  }
-}
+//   constructor() {
+//     console.log("Creating person object...");
+//   }
+// }
 
-const pers = new Person();
+// const pers = new Person();
 
-console.log(pers);
+// console.log(pers);
 
-// ---
+// --- ////////////////////////////////////////////////
 
 function PropertyD(target: any, propertyName: string | symbol) {
   console.log("YYYYYYY PropertyD Property decorator!");
-  console.log(target);
-  console.log(propertyName);
+  console.log("target = ", target);
+  console.log("propertyName = ", propertyName);
   console.log("xxxx");
 }
 
 function AccessorD(target: any, name: string, descriptor: PropertyDescriptor) {
   console.log("YYYYYYY AccessorD Accessor decorator!");
-  console.log(target);
-  console.log(name);
-  console.log(descriptor);
+  console.log("target = ", target);
+  console.log("name = ", name);
+  console.log("descriptor = ", descriptor);
   console.log("xxxx");
 }
 
@@ -57,17 +57,17 @@ function MethodD(
   descriptor: PropertyDescriptor
 ) {
   console.log("YYYYYYY MethodD Method decorator!");
-  console.log(target);
-  console.log(name);
-  console.log(descriptor);
+  console.log("target = ", target);
+  console.log("name = ", name);
+  console.log("descriptor = ", descriptor);
   console.log("xxxx");
 }
 
 function ParamD(target: any, name: string | symbol, position: number) {
   console.log("YYYYYYY ParamD Parameter decorator!");
-  console.log(target);
-  console.log(name);
-  console.log(position);
+  console.log("target = ", target);
+  console.log("name = ", name);
+  console.log("position = ", position);
   console.log("xxxx");
 }
 

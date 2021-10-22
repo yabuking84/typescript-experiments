@@ -25,3 +25,4 @@ Person.prototype.firstLetter = function () {
   return this.firstName.charAt(0) + " sdfdsf";
 };
 console.log(p.firstLetter());
+console.log(p);

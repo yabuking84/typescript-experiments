@@ -1,7 +1,4 @@
-"use strict";
 // GENERICS
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.newObj3 = void 0;
 // Using constraints
 function newObj(arg) {
     return `Has ${arg.length} characters.`;
@@ -19,10 +16,9 @@ function extractAndConvert(obj, key) {
     return "Value: " + obj[key];
 }
 // extractAndConvert({}, "name");
-function newObj3(obj) {
+export function newObj3(obj) {
     return JSON.parse(JSON.stringify(obj));
 }
-exports.newObj3 = newObj3;
 ////////////////////////////////////////////////////////////////
 class DataStorage {
     constructor() {

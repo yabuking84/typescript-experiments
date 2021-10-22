@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 class Jo {
     constructor(n) {
         this.name = n;
@@ -9,3 +7,4 @@ class Jo {
     }
 }
 const go = new Jo(4);
+export {};
