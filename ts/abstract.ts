@@ -115,3 +115,4 @@ accounting.describe();
 // const accountingCopy = { name: 'DUMMY', describe: accounting.describe };
 
 // accountingCopy.describe();
+export {};

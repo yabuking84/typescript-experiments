@@ -1,7 +1,7 @@
-function Logger<T>(constructor: T) {
+function Logger(constructor: any) {
   console.log("Logging...");
   console.log("constructor = ", constructor);
-  const p = new constructor() as T;
+  const p = new constructor();
   console.log("name = ", constructor.name);
 }
 
@@ -39,3 +39,5 @@ class Person2 {
 const pers2 = new Person2();
 
 console.log(pers2);
+
+export {};

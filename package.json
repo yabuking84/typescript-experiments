@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tsc": "tsc && node ./js/api.js"
+    "tsc": "tsc && node ./js/api.js",
+    "tsnode": "tsc && node",
+    "tsnodew": "tsc --watch && node"
   },
   "author": "",
   "license": "ISC",

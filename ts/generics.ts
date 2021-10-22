@@ -29,7 +29,7 @@ function extractAndConvert<T extends object, U extends keyof T>(
   return "Value: " + obj[key];
 }
 
-extractAndConvert({}, "name");
+// extractAndConvert({}, "name");
 
 export function newObj3<T extends Record<string, unknown>>(obj: T): T {
   return JSON.parse(JSON.stringify(obj));
@@ -64,3 +64,5 @@ textStorage.removeItem("Max", 1);
 console.log(textStorage.getItems());
 
 const numberStorage = new DataStorage<number>();
+
+export {};

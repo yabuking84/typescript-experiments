@@ -21,3 +21,5 @@ const go = new Jo(4);
 // console.log(go.name);
 // go.setName();
 // console.log(go.name);
+
+export {};

@@ -27,3 +27,5 @@ const src: Hey = {
   title: "asd",
   data: 1,
 };
+
+export {};
